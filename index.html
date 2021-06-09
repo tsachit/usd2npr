@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>USD To NPR!</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #title {
+        text-align: center;
+      }
+      #currentValue {
+        font-size: 36vh;
+        text-align: center;
+        top: 30%;
+        bottom: 50%;
+        width: 100%;
+        position: absolute;
+      }
+      #refresh {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">1 USD To NPR equals</h1>
+    <span id="currentValue">...</span>
+    <button type="button" id="refresh" onClick="getCurrentValue()">Refresh</button>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./script.js"></script>
+  </body>
+</html>
